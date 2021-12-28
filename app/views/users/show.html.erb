@@ -1,11 +1,12 @@
-<h1>Users</h1>
+<p>Email : <%=  @user.email %></p>
 
-<ul>
-  <% @articles.each do |article| %>
-    <li>
-      <a href="/articles/<%= article.id %>">
-        <%= article.title %>
-      </a>
-    </li>
-  <% end %>
-</ul>
+<p> Nome : <%=@user.name %></p>
+
+<p>Idade :<%=  @user.age %></p>
+
+
+<p><%= link_to "Return", root_path(@user) %></p>
+<p><%= link_to "Edit", edit_user_path(@user) %></p>
+<p><%= link_to "Destroy", user_path(@user),
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %></li>
