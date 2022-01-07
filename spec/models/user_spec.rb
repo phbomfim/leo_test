@@ -15,19 +15,4 @@ RSpec.describe User, type: :model do
       expect(user.age).to(eq(28))
     }
   end
-
-  it 'create a valid email' do
-    user.email = 'test@test.com'
-    expect(user).to be_valid
-  end
-
-  it 'create a invalid name' do
-    user.name = '252525'
-    expect(user).to_not be_valid
-  end
-
-  it 'create a invalid age' do
-    user.age = '17'
-    expect(user).to_not be_valid
-  end
 end
