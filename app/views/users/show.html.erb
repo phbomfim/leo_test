@@ -5,8 +5,9 @@
 <p>Idade :<%=  @user.age %></p>
 
 
-<p><%= link_to "Return", root_path(@user) %></p>
-<p><%= link_to "Edit", edit_user_path(@user) %></p>
+<p><%= link_to "Return", root_path(@user), class: "btn btn-primary" %></p>
+<p><%= link_to "Edit", edit_user_path(@user) , class: "btn btn-info" %></p>
 <p><%= link_to "Destroy", user_path(@user),
                   method: :delete,
-                  data: { confirm: "Are you sure?" } %></li>
+                  data: { confirm: "Are you sure?" },
+                  class: "btn btn-danger" %></li>
