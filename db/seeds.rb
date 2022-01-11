@@ -6,3 +6,5 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+File.open("user.json", "w") { |f| f.write User.all.to_json }
