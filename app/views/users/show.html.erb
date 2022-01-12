@@ -1,3 +1,5 @@
+<%= render "navbar" %>
+
 <p>Email : <%=  @user.email %></p>
 
 <p> Nome : <%=@user.name %></p>
@@ -5,8 +7,8 @@
 <p>Idade :<%=  @user.age %></p>
 
 
-<p><%= link_to "Return", root_path(@user), class: "btn btn-primary" %></p>
-<p><%= link_to "Edit", edit_user_path(@user) , class: "btn btn-info" %></p>
+<p><%= link_to "Return", root_path(@user), class: "btn btn-success" %></p>
+<p><%= link_to "Edit", edit_user_path(@user) , class: "btn btn-warning" %></p>
 <p><%= link_to "Destroy", user_path(@user),
                   method: :delete,
                   data: { confirm: "Are you sure?" },
