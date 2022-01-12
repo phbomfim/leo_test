@@ -1,13 +1,27 @@
 <%= render "navbar" %>
 
-<h1> Users </h1>
+<h1> User List </h1>
 
-<ul>
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th> Nome </th>
+      <th> Email </th>
+      <th> Idade </th>
+      <th colspan="4"></th>
+  </thead>
+
+  <tbody>
   <% @users.each do |user| %>
-    <li>
-      <%= link_to user.email, user %>
-    </li>
+    <tr>
+      <td> <%= link_to user.name, user_path(user.id) %> </td>
+      <td> <%=  user.email %> </td>
+     <td>  <%=  user.age %> </td>
+    </p>
   <% end %>
-</ul>
+</tbody>
+</table>
 
-<%= link_to "New User", new_user_path, class: "btn btn-success" %>
+<br>
+
+<%= link_to "New User", new_user_path, class: "btn btn-dark" %>
