@@ -44,6 +44,14 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def export_json
+    @users = User.all
+    respond_to do |format|
+      format.html
+      format.json { render json: @users}
+    end
+  end
+
   private
 
   def user_params
