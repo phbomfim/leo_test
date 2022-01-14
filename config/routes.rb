@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root 'users#index'
 
   resources :users do
-    member do
+    collection do
       get :export_json
     end
   end
